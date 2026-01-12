@@ -53,13 +53,9 @@ HR teams manage high-volume, policy-driven questions where accuracy and consiste
   <summary><strong>Click to expand</strong></summary>
 
   <p align="center">
-    <img src="assets/project-layout.png" width="700" alt="Project layout">
+    <img src="assets/project-layout.png" width="600" alt="Project layout">
   </p>
 </details>
-
-### Notes
-- `.env` is for local secrets and is git-ignored. Use `.env.example` for a safe template.
-- The implementation is intentionally minimal to enable fast iteration. Replace stub logic with real embedding and vector search as needed.
 
 ### Use Case
 ![HR-RAG-Assistant](assets/app-demo.png)
