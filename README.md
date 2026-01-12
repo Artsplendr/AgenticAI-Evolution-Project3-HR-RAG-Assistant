@@ -50,56 +50,68 @@ HR teams manage high-volume, policy-driven questions where accuracy and consiste
 ### Project layout
 
 <details>
-<summary><b>data/indexes/hr_default/ (index artifacts)</b></summary>
+<summary><b>Full project layout (click to expand)</b></summary>
 <pre>
-data/
-└── indexes/
-└── hr_default/
-├── chunks.jsonl # chunk metadata/content (example format)
-├── index.faiss # vector index (FAISS)
-└── meta.json # index configuration / stats
-</pre>
-</details>
-<details>
-<summary><b>data/raw/ (HR policy sources ingested by RAG)</b></summary>
-<pre>
-data/
-└── raw/
-├── benefits_overview.md
-├── hr_handbook.md
-├── leave_policy.md
-├── onboarding_guide.md
-└── remote_work_policy.md
-</pre>
-</details>
-<details>
-<summary><b>src/hr_rag_assistant/ (core package)</b></summary>
-src/
-└── hr_rag_assistant/
-└── retrieval/
-├── init.py
-├── prompts.py # “answer only from HR policy context”
-├── retriever.py # similarity search top_k
-└── vectorstore.py # load/save vector index abstraction
-</pre>
-data/indexes/hr_default
-<pre>
-data/
-└── indexes/
-└── hr_default/
-├── chunks.jsonl
-├── index.faiss
-└── meta.json
-</pre>
-data/raw
-<pre>
-data/
-└── raw/
-├── benefits_overview.md
-├── hr_handbook.md
-├── leave_policy.md
-├── onboarding_guide.md
-└── remote_work_policy.md
+HR-RAG-Assistant/
+├── assets/
+│ ├── app-demo.png
+│ └── project-layout.png
+├── data/
+│ ├── indexes/
+│ │ └── hr_default/
+│ │ ├── chunks.jsonl
+│ │ ├── index.faiss
+│ │ └── meta.json
+│ ├── processed/
+│ │ ├── cleaned/
+│ │ └── chunks/
+│ └── raw/
+│ ├── benefits_overview.md
+│ ├── hr_handbook.md
+│ ├── leave_policy.md
+│ ├── onboarding_guide.md
+│ └── remote_work_policy.md
+├── docs/
+│ ├── architecture.md
+│ ├── decisions.md
+│ └── hr_question_examples.md
+├── scripts/
+│ ├── ask_hr.py
+│ ├── eval_hr.py
+│ ├── export_layout_png.py
+│ └── ingest_hr_docs.py
+├── src/
+│ └── hr_rag_assistant/
+│ ├── init.py
+│ ├── agent.py
+│ ├── config.py
+│ ├── logging.py
+│ ├── types.py
+│ ├── generation/
+│ │ ├── init.py
+│ │ ├── answerer.py
+│ │ └── citations.py
+│ ├── ingestion/
+│ │ ├── init.py
+│ │ ├── chunker.py
+│ │ ├── cleaner.py
+│ │ ├── index_builder.py
+│ │ └── loaders.py
+│ └── retrieval/
+│ ├── init.py
+│ ├── prompts.py
+│ ├── retriever.py
+│ └── vectorstore.py
+├── tests/
+│ ├── test_chunker.py
+│ ├── test_retriever.py
+│ └── test_hr_agent_smoke.py
+├── .env.example
+├── .gitignore
+├── LICENSE
+├── README.md
+├── pyproject.toml
+└── app.py
 </pre>
 </details>
 
