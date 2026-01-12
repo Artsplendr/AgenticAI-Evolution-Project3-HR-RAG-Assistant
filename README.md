@@ -22,5 +22,5 @@ A lightweight Retrieval-Augmented Generation (RAG) assistant focused on HR polic
 - The implementation is intentionally minimal to enable fast iteration. Replace stub logic with real embedding and vector search as needed.
 
 ### Use Case
-![HR-RAG-Assistant](assets/use-case.png)
+![HR-RAG-Assistant](assets/use_case.png)
 
