@@ -49,7 +49,7 @@ HR teams manage high-volume, policy-driven questions where accuracy and consiste
     
 ### Project layout
 <details>
-<summary><b>Click to expand/b></summary>
+<summary><b>Full project layout (click to expand)</b></summary>
 <pre>
 HR-RAG-Assistant/
 assets/
