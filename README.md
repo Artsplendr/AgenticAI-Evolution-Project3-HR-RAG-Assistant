@@ -46,29 +46,73 @@ HR teams manage high-volume, policy-driven questions where accuracy and consiste
   streamlit run app.py
   ```
 - Ask a question, e.g. "Is there a budget for training or professional development?
-
-
-### Project layout
-<details>
-  <summary><strong>Click to expand</strong></summary>
-
-  <p align="center">
-    <img src="assets/project-layout.png" width="600" alt="Project layout">
-  </p>
-</details>
-
-  <details>
-  <summary><b>Project layout (click to expand)</b></summary>
     
 ### Project layout
-  <pre>
-  03-HR-RAG-Assistant/
-    assets/
-      app-demo.png
-      project-layout.png
-    ...
-  </pre>
-  </details>
+<details>
+<summary><b>Click to expand/b></summary>
+<pre>
+HR-RAG-Assistant/
+assets/
+app-demo.png
+project-layout.png
+data/
+indexes/
+hr_default/
+chunks.jsonl
+index.faiss
+meta.json
+processed/
+cleaned/
+chunks/
+raw/
+benefits_overview.md
+hr_handbook.md
+leave_policy.md
+onboarding_guide.md
+remote_work_policy.md
+docs/
+architecture.md
+decisions.md
+hr_question_examples.md
+scripts/
+ask_hr.py
+eval_hr.py
+export_layout_png.py
+ingest_hr_docs.py
+src/
+hr_rag_assistant/
+init.py
+agent.py
+config.py
+logging.py
+types.py
+generation/
+init.py
+answerer.py
+citations.py
+ingestion/
+init.py
+chunker.py
+cleaner.py
+index_builder.py
+loaders.py
+retrieval/
+init.py
+prompts.py
+retriever.py
+vectorstore.py
+tests/
+test_chunker.py
+test_retriever.py
+test_hr_agent_smoke.py
+.env.example
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+app.py
+</pre>
+</details>
 
 ### Use Case
 ![HR-RAG-Assistant](assets/app-demo.png)
