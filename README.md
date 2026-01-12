@@ -15,13 +15,11 @@ A lightweight Retrieval-Augmented Generation (RAG) assistant focused on HR polic
   ```
 
 ### Project layout
-Matches the structure requested in this repository, including:
-- Top-level configs and env files
-- `data/` with `raw/`, `processed/`, and `indexes/`
-- `src/hr_rag_assistant/` with ingestion, retrieval, generation modules, and `agent.py`
-- `scripts/` for ingestion and Q&A entrypoints
-- `tests/` with a small smoke suite
-- `docs/` for architecture, examples, and decisions
+| ENTRY POINTS | DATA | CORE LOGIC | INTERFACES |
+|-------------|------|------------|------------|
+| app.py<br>(Streamlit UI) | **data/raw/**<br>• hr_handbook.md<br>• remote_work_policy.md<br>• leave_policy.md<br>• benefits_overview.md<br>• onboarding_guide.md<br><br>**data/indexes/**<br>• hr_default/<br>&nbsp;&nbsp;• index.faiss<br>&nbsp;&nbsp;• chunks.jsonl<br>&nbsp;&nbsp;• meta.json | **src/hr_rag_assistant/**<br>• config.py<br>• types.py<br><br>**ingestion/**<br>• loaders.py<br>• cleaner.py<br>• chunker.py<br>• index_builder.py<br><br>**retrieval/**<br>• vectorstore.py<br>• retriever.py<br>• prompts.py<br><br>**generation/**<br>• answerer.py<br>• citations.py<br><br>agent.py (opt) | **scripts/**<br>• ingest_hr_docs.py<br>• ask_hr.py<br>• eval_hr.py (opt) |
+| **CONFIG & META** | **DOCUMENTATION** | **TESTS** | |
+| .env<br>.env.example<br>pyproject.toml<br>README.md | **docs/**<br>• architecture.md<br>• hr_questions.md<br>• decisions.md | **tests/**<br>• test_chunker.py<br>• test_retriever.py<br>• test_smoke.py | |
 
 ### Notes
 - `.env` is for local secrets and is git-ignored. Use `.env.example` for a safe template.
