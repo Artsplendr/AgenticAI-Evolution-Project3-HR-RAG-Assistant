@@ -1,0 +1,56 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+
+# Environments
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Editors/IDE
+.vscode/
+.idea/
+
+# Project artifacts (optional caches)
+data/processed/cleaned/
+data/processed/chunks/
+
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+
+# Envs
+.env
+
+# Data artifacts (optional)
+data/processed/cleaned/*
+data/processed/chunks/*
+data/indexes/hr_default/*
+data/indexes/
+
+# Editors
+.idea/
+.vscode/
+
