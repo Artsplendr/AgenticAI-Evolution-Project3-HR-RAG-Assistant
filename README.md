@@ -59,18 +59,18 @@ HR-RAG-Assistant/
 ├── data/
 │ ├── indexes/
 │ │ └── hr_default/
-│ │ ├── chunks.jsonl
-│ │ ├── index.faiss
-│ │ └── meta.json
+│ │ ├── ├── chunks.jsonl
+│ │ ├── ├── index.faiss
+│ │ └── └── meta.json
 │ ├── processed/
 │ │ ├── cleaned/
 │ │ └── chunks/
 │ └── raw/
-│ ├── benefits_overview.md
-│ ├── hr_handbook.md
-│ ├── leave_policy.md
-│ ├── onboarding_guide.md
-│ └── remote_work_policy.md
+│ ├── ├── benefits_overview.md
+│ ├── ├── hr_handbook.md
+│ ├── ├── leave_policy.md
+│ ├── ├── onboarding_guide.md
+│ └── └── remote_work_policy.md
 ├── docs/
 │ ├── architecture.md
 │ ├── decisions.md
@@ -82,26 +82,26 @@ HR-RAG-Assistant/
 │ └── ingest_hr_docs.py
 ├── src/
 │ └── hr_rag_assistant/
-│ ├── init.py
-│ ├── agent.py
-│ ├── config.py
-│ ├── logging.py
-│ ├── types.py
+│ ├── ├── init.py
+│ ├── ├── agent.py
+│ ├── ├── config.py
+│ ├── ├── logging.py
+│ ├── └── types.py
 │ ├── generation/
-│ │ ├── init.py
-│ │ ├── answerer.py
-│ │ └── citations.py
+│ │ ├── ├── init.py
+│ │ ├── ├── answerer.py
+│ │ └── └── citations.py
 │ ├── ingestion/
-│ │ ├── init.py
-│ │ ├── chunker.py
-│ │ ├── cleaner.py
-│ │ ├── index_builder.py
-│ │ └── loaders.py
+│ │ ├── ├── init.py
+│ │ ├── ├── chunker.py
+│ │ ├── ├── cleaner.py
+│ │ ├── ├── index_builder.py
+│ │ └── └── loaders.py
 │ └── retrieval/
-│ ├──- init.py
-│ ├──- prompts.py
-│ ├──- retriever.py
-│ └──- vectorstore.py
+│ ├── ├── init.py
+│ ├── ├── prompts.py
+│ ├── ├── retriever.py
+│ └── └── vectorstore.py
 ├── tests/
 │ ├── test_chunker.py
 │ ├── test_retriever.py
