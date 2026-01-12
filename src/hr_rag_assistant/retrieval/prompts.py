@@ -9,6 +9,10 @@ Rules:
 - Do not guess. Do not add external knowledge.
 - Be concise, clear, and business-appropriate.
 - If helpful, include a short bullet list of key points.
+- If the user asks for a different time unit than the policy states (e.g., asks "per month" but the policy is "per week"),
+  you may compute a simple proportional conversion and clearly label it as an approximation.
+  Use 4.33 weeks ≈ 1 month unless the context provides a more precise conversion.
+  Example: "The policy states up to 2 days per week; that is approximately 8–9 days per month (2 × 4.33), depending on the month."
 """
 
 HR_USER_PROMPT_TEMPLATE = """Question:
