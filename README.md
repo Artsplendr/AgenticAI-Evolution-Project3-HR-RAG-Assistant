@@ -57,6 +57,19 @@ HR teams manage high-volume, policy-driven questions where accuracy and consiste
   </p>
 </details>
 
+  <details>
+  <summary><b>Project layout (click to expand)</b></summary>
+    
+### Project layout
+  <pre>
+  03-HR-RAG-Assistant/
+    assets/
+      app-demo.png
+      project-layout.png
+    ...
+  </pre>
+  </details>
+
 ### Use Case
 ![HR-RAG-Assistant](assets/app-demo.png)
 
