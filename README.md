@@ -98,10 +98,10 @@ HR-RAG-Assistant/
 │ │ ├── index_builder.py
 │ │ └── loaders.py
 │ └── retrieval/
-│ ├── init.py
-│ ├── prompts.py
-│ ├── retriever.py
-│ └── vectorstore.py
+│ ├──- init.py
+│ ├──- prompts.py
+│ ├──- retriever.py
+│ └──- vectorstore.py
 ├── tests/
 │ ├── test_chunker.py
 │ ├── test_retriever.py
