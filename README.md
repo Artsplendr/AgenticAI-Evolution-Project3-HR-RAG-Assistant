@@ -16,7 +16,7 @@ A lightweight Retrieval-Augmented Generation (RAG) assistant focused on HR polic
 
 ### Project layout
 <details>
-  <summary><strong>Project layout (click to expand)</strong></summary>
+  <summary><strong>Click to expand</strong></summary>
 
   <p align="center">
     <img src="assets/project-layout.png" width="700" alt="Project layout">
