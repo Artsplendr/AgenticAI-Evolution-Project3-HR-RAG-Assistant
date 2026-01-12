@@ -74,29 +74,32 @@ data/
 </details>
 <details>
 <summary><b>src/hr_rag_assistant/ (core package)</b></summary>
-<pre>
 src/
 └── hr_rag_assistant/
-├── init.py
-├── agent.py # orchestrates: retrieve → generate
-├── config.py # paths, env, defaults
-├── logging.py # logger setup
-├── types.py # dataclasses: chunks, results
-├── generation/
-│ ├── init.py
-│ ├── answerer.py # synthesis w/ instruction + citations
-│ └── citations.py # format source references
-├── ingestion/
-│ ├── init.py
-│ ├── chunker.py # split text into overlapping chunks
-│ ├── cleaner.py # normalize text, remove boilerplate
-│ ├── index_builder.py# persist placeholder/real index
-│ └── loaders.py # load .md files (extensible)
 └── retrieval/
 ├── init.py
 ├── prompts.py # “answer only from HR policy context”
 ├── retriever.py # similarity search top_k
 └── vectorstore.py # load/save vector index abstraction
+</pre>
+data/indexes/hr_default
+<pre>
+data/
+└── indexes/
+└── hr_default/
+├── chunks.jsonl
+├── index.faiss
+└── meta.json
+</pre>
+data/raw
+<pre>
+data/
+└── raw/
+├── benefits_overview.md
+├── hr_handbook.md
+├── leave_policy.md
+├── onboarding_guide.md
+└── remote_work_policy.md
 </pre>
 </details>
 
