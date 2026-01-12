@@ -4,10 +4,10 @@
 
 This project is the third installment in the AgenticAI Evolution series.
 
-Project 1: focused on a fully deterministic pipeline for answering analytics questions.
-Project 2: introduces LLMs as agents — specifically a Planner and a Narrator — while keeping execution and evidence strictly deterministic.
+- Project 1: focused on a fully deterministic pipeline for answering analytics questions.
+- Project 2: introduces LLMs as agents — specifically a Planner and a Narrator — while keeping execution and evidence strictly deterministic.
 A lightweight Retrieval-Augmented Generation (RAG) assistant focused on HR policies and procedures. It ingests HR markdown documents, builds a small local index, and answers employee questions with citations grounded in the policy content.
-Project 3 (this repo): A grounded, HR‑focused RAG assistant that turns policy documents into fast, trustworthy answers with clear citations for both employees and HR teams.
+- Project 3 (this repo): A grounded, HR‑focused RAG assistant that turns policy documents into fast, trustworthy answers with clear citations for both employees and HR teams.
 
 This project is a practical introduction to modern AI assistants built with Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG). Instead of relying on an LLM’s memory alone, the system retrieves relevant HR policy snippets from a local index and asks the model to answer strictly from that context, producing grounded, concise responses with citations.
 
@@ -50,7 +50,7 @@ HR teams manage high-volume, policy-driven questions where accuracy and consiste
 ### Project layout
 
 <details>
-<summary><b>Full project layout (click to expand)</b></summary>
+<summary><b>Click to expand</b></summary>
 <pre>
 HR-RAG-Assistant/
 ├── assets/
