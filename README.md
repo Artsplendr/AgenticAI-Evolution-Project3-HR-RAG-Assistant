@@ -50,68 +50,53 @@ HR teams manage high-volume, policy-driven questions where accuracy and consiste
 ### Project layout
 
 <details>
-<summary><b>Full project layout (click to expand)</b></summary>
+<summary><b>data/indexes/hr_default/ (index artifacts)</b></summary>
 <pre>
-HR-RAG-Assistant/
-├── assets/
-│ ├── app-demo.png
-│ └── project-layout.png
-├── data/
-│ ├── indexes/
-│ │ └── hr_default/
-│ │ ├── chunks.jsonl
-│ │ ├── index.faiss
-│ │ └── meta.json
-│ ├── processed/
-│ │ ├── cleaned/
-│ │ └── chunks/
-│ └── raw/
-│ ├── benefits_overview.md
-│ ├── hr_handbook.md
-│ ├── leave_policy.md
-│ ├── onboarding_guide.md
-│ └── remote_work_policy.md
-├── docs/
-│ ├── architecture.md
-│ ├── decisions.md
-│ └── hr_question_examples.md
-├── scripts/
-│ ├── ask_hr.py
-│ ├── eval_hr.py
-│ ├── export_layout_png.py
-│ └── ingest_hr_docs.py
-├── src/
-│ └── hr_rag_assistant/
+data/
+└── indexes/
+└── hr_default/
+├── chunks.jsonl # chunk metadata/content (example format)
+├── index.faiss # vector index (FAISS)
+└── meta.json # index configuration / stats
+</pre>
+</details>
+<details>
+<summary><b>data/raw/ (HR policy sources ingested by RAG)</b></summary>
+<pre>
+data/
+└── raw/
+├── benefits_overview.md
+├── hr_handbook.md
+├── leave_policy.md
+├── onboarding_guide.md
+└── remote_work_policy.md
+</pre>
+</details>
+<details>
+<summary><b>src/hr_rag_assistant/ (core package)</b></summary>
+<pre>
+src/
+└── hr_rag_assistant/
+├── init.py
+├── agent.py # orchestrates: retrieve → generate
+├── config.py # paths, env, defaults
+├── logging.py # logger setup
+├── types.py # dataclasses: chunks, results
+├── generation/
 │ ├── init.py
-│ ├── agent.py
-│ ├── config.py
-│ ├── logging.py
-│ ├── types.py
-│ ├── generation/
-│ │ ├── init.py
-│ │ ├── answerer.py
-│ │ └── citations.py
-│ ├── ingestion/
-│ │ ├── init.py
-│ │ ├── chunker.py
-│ │ ├── cleaner.py
-│ │ ├── index_builder.py
-│ │ └── loaders.py
-│ └── retrieval/
+│ ├── answerer.py # synthesis w/ instruction + citations
+│ └── citations.py # format source references
+├── ingestion/
 │ ├── init.py
-│ ├── prompts.py
-│ ├── retriever.py
-│ └── vectorstore.py
-├── tests/
-│ ├── test_chunker.py
-│ ├── test_retriever.py
-│ └── test_hr_agent_smoke.py
-├── .env.example
-├── .gitignore
-├── LICENSE
-├── README.md
-├── pyproject.toml
-└── app.py
+│ ├── chunker.py # split text into overlapping chunks
+│ ├── cleaner.py # normalize text, remove boilerplate
+│ ├── index_builder.py# persist placeholder/real index
+│ └── loaders.py # load .md files (extensible)
+└── retrieval/
+├── init.py
+├── prompts.py # “answer only from HR policy context”
+├── retriever.py # similarity search top_k
+└── vectorstore.py # load/save vector index abstraction
 </pre>
 </details>
 
